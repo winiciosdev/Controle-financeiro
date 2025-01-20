@@ -15,7 +15,7 @@ public class DividaService {
         this.dividaRepository = dividaRepository;
     }
 
-    public List<Divida> listarDividasPorUsuario(Long usuarioId){
-        return dividaRepository.findByUsuarioId(usuarioId);
+    public List<Divida> buscarPorMes(String mes){
+        return dividaRepository.findByMes(mes);
     }
 }
