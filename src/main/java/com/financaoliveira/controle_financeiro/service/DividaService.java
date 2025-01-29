@@ -15,7 +15,7 @@ public class DividaService {
         this.dividaRepository = dividaRepository;
     }
 
-    public List<Divida> buscarPorMes(String mes){
-        return dividaRepository.findByMes(mes);
+    public List<Divida> buscarPorMes(String mesReferencia){
+        return dividaRepository.findByMesReferencia(mesReferencia);
     }
 }

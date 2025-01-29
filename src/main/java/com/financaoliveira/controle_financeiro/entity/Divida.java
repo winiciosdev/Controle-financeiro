@@ -16,12 +16,19 @@ public class Divida {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(nullable = false)
     private String descricao;
+    
     private BigDecimal Valor;
     private LocalDate dataVencimento;
 
+    @Column(nullable = false)
+    private String mesReferencia;
+
+
+    //Relacionado com usuario
     @ManyToOne
-    @JoinColumn(name = "usuario_id")
+    @JoinColumn(name = "usuario_id", nullable = false)// Definindo que o campo não pode ser nulo
     private Usuario usuario;
 
 }
